@@ -1,0 +1,16 @@
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.csproj.AssemblyReference.cache
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.AssemblyInfoInputs.cache
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.AssemblyInfo.cs
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.csproj.CoreCompileInputs.cache
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Infrastructures.deps.json
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Infrastructures.runtimeconfig.json
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Infrastructures.runtimeconfig.dev.json
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Infrastructures.dll
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Infrastructures.pdb
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.csproj.CopyComplete
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.dll
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.pdb
+C:\Users\30698\source\ProjectASPNET\ProjectAPI\Infrastructures\obj\Debug\netcoreapp3.1\Infrastructures.genruntimeconfig.cache
