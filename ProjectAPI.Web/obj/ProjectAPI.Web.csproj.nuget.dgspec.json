@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj": {}
+    "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj": {
+    "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\30698\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\obj\\",
+        "outputPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\30698\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Infrastructures\\Infrastructures.csproj": {
+    "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Infrastructures\\Infrastructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Infrastructures\\Infrastructures.csproj",
+        "projectUniqueName": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Infrastructures\\Infrastructures.csproj",
         "projectName": "Infrastructures",
-        "projectPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Infrastructures\\Infrastructures.csproj",
+        "projectPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Infrastructures\\Infrastructures.csproj",
         "packagesPath": "C:\\Users\\30698\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Infrastructures\\obj\\",
+        "outputPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Infrastructures\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\30698\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +88,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj"
+              "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj"
               }
             }
           }
@@ -138,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj": {
+    "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj",
+        "projectUniqueName": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj",
         "projectName": "ProjectAPI.Web",
-        "projectPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj",
+        "projectPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\ProjectAPI.Web\\ProjectAPI.Web.csproj",
         "packagesPath": "C:\\Users\\30698\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\ProjectAPI.Web\\obj\\",
+        "outputPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\ProjectAPI.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\30698\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -162,8 +168,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Infrastructures\\Infrastructures.csproj": {
-                "projectPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Infrastructures\\Infrastructures.csproj"
+              "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Infrastructures\\Infrastructures.csproj": {
+                "projectPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Infrastructures\\Infrastructures.csproj"
               }
             }
           }
@@ -178,6 +184,18 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -191,6 +209,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

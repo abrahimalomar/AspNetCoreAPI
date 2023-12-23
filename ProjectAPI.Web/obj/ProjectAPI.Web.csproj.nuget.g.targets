@@ -3,4 +3,8 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.security.cryptography.protecteddata\8.0.0\buildTransitive\netcoreapp2.0\System.Security.Cryptography.ProtectedData.targets" Condition="Exists('$(NuGetPackageRoot)system.security.cryptography.protecteddata\8.0.0\buildTransitive\netcoreapp2.0\System.Security.Cryptography.ProtectedData.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.configuration.configurationmanager\8.0.0\buildTransitive\netcoreapp2.0\System.Configuration.ConfigurationManager.targets" Condition="Exists('$(NuGetPackageRoot)system.configuration.configurationmanager\8.0.0\buildTransitive\netcoreapp2.0\System.Configuration.ConfigurationManager.targets')" />
+  </ImportGroup>
 </Project>

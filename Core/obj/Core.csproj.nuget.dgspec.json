@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj": {}
+    "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj": {
+    "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\30698\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\30698\\source\\ProjectASPNET\\ProjectAPI\\Core\\obj\\",
+        "outputPath": "C:\\Users\\30698\\Desktop\\AspNetCoreAPI\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\30698\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

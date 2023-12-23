@@ -3,18 +3,24 @@ using System;
 using System.Linq;
 using Infrastructures.UnitOfWork;
 using Core.interfaces;
+using Infrastructures.Repository;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FirstProjectAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
+        private readonly AppDbContext _Context;
         protected IUnitOfWork _unitOfWork;
 
-        public ProductsController(IUnitOfWork unitOfWork)
+        public ProductsController(IUnitOfWork unitOfWork,AppDbContext appDbContext)
         {
             _unitOfWork = unitOfWork;
+            _Context = appDbContext;
         }
 
         [HttpGet]
@@ -33,8 +39,19 @@ namespace FirstProjectAPI.Controllers
             }
         }
 
+        [HttpGet("GetProduct/{id}")]
+        public IActionResult GetProduct(int id)
+        {
+            var product = _unitOfWork.products.GetById(id);
+            if (product==null)
+            {
+                return NotFound($"Product Id {id} Not Found");
+            }
+            return Ok(product);
+        }
+
         [HttpPost]
-        public IActionResult AddProduct([FromBody] Product product)
+        public IActionResult AddProduct([FromForm] Product product)
         {
             try
             {
@@ -48,9 +65,6 @@ namespace FirstProjectAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
-
 
         [HttpPut("{id}")]
         public IActionResult Edit(int id, [FromBody] Product updatedProduct)

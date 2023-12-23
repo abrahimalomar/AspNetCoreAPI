@@ -1,9 +1,11 @@
 using Core.interfaces;
+using Core.Model;
 using Infrastructures.Repository;
 using Infrastructures.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -11,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-
+using ProjectAPI.Web.Extentions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,37 +33,46 @@ namespace ProjectAPI.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
+         
+
+
+
 
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("Connection"),
             b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)
             )
         );
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            services.AddSwaggerGen(c =>
-            {
+            services.AddSwaggerGenJwtAuth();
+            services.AddCustomJwtAuth(Configuration);
 
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "My API",
-                    Version = "v1",
-                    Description = "This is a sample API for demonstration purposes.",
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Ibrahim Alomar",
-                        Email = "abrahimalomar1770@gmail.com",
-                        Url = new Uri("https://www.abrahimalomar.com")
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Your License",
-                        Url = new Uri("https://www.abrahimalomar.com/license")
-                    }
-                });
 
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+
+            //    c.SwaggerDoc("v1", new OpenApiInfo
+            //    {
+            //        Title = "My API",
+            //        Version = "v1",
+            //        Description = "This is a sample API for demonstration purposes.",
+            //        Contact = new OpenApiContact
+            //        {
+            //            Name = "Ibrahim Alomar",
+            //            Email = "abrahimalomar1770@gmail.com",
+            //            Url = new Uri("https://www.abrahimalomar.com")
+            //        },
+            //        License = new OpenApiLicense
+            //        {
+            //            Name = "Your License",
+            //            Url = new Uri("https://www.abrahimalomar.com/license")
+            //        }
+            //    });
+
+            //});
 
         }
 
@@ -83,7 +94,7 @@ namespace ProjectAPI.Web
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
